@@ -46,7 +46,8 @@ image1.style.height = '160px';
 image1.style.width = '130px';
 image1.id = 'new_york_pic'
 let newYorkP = document.getElementById("new-york_p");
- let newYorkWeather = axios.get(`https://api.openweathermap.org/data/2.5/weather?q=new&york&units=metric&appid=22fe714020fda5e1b1931cc750b203ae`).then(displayWeatherInfoNewYork);
+ let newYorkWeather = axios.get(`https://api.openweathermap.org/data/2.5/weather?q=new york&units=metric&appid=22fe714020fda5e1b1931cc750b203ae`).then(displayWeatherInfoNewYork);
+
  function displayWeatherInfoNewYork(response) {
   newYorkP.innerHTML = `Today in New York ${Math.round(response.data.main.temp)}°`
 }
